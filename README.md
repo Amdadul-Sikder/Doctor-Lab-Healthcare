@@ -1,6 +1,6 @@
 # Doctor Lab
 
-Live Link [https://doctor-lab.web.app/](https://doctor-lab.web.app/react-app).
+Live Link [https://doctor-lab.web.app/](https://doctor-lab.web.app/).
 
 ## About this website
 * React Based Website
