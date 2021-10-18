@@ -1,6 +1,6 @@
 .hero-area{
     background-image: url(../../../Images/hero-bg.png);
-    height: 600px;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     background-position: center;

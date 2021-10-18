@@ -1,0 +1,21 @@
+.register{
+    background-image: url(../../Images/login-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-bottom: 30px;
+    
+}
+.register .contact-form{
+    padding: 40px 50px;
+    width: 30%;
+    background-color: #fff;
+}
+.register.input.form-control {
+    width: 300px;
+}
+
+.register-btn{
+    width: 100%;
+    margin: 10px 0px;
+}

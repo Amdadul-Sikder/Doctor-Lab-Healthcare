@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
 import "./Footer.css"
 
 const Footer = () => {
@@ -17,7 +18,7 @@ const Footer = () => {
                     <div className="col-lg-4">
                         <h2>+880123456789</h2>
                         <h5>contact@gmail.com</h5>
-                        <Button className="mt-3" variant="light">Contact Us</Button>
+                        <HashLink to="/contact#contact"><Button className="mt-3" variant="light">Contact Us</Button></HashLink>
                     </div>
                     <hr />
                     <p>Copyright &copy; 2021</p>

@@ -1,33 +1,33 @@
 import React from 'react';
-import { Button, Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import "./Header.css"
 const Header = () => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar className="navbar" bg="light" expand="lg" sticky="top">
             <Container>
-                <Navbar.Brand href="#">Doctor Lab</Navbar.Brand>
+                {/* <Navbar.Brand href="#">Doctor Lab</Navbar.Brand> */}
+                <HashLink className="logo" to="/home#home">Doctor Lab</HashLink>
+
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
-                        className="me-auto my-2 my-lg-0"
+                        className="ms-auto me-5 my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Link</Nav.Link>
-                        <Nav.Link href="#" disabled>
-                            Link
-                        </Nav.Link>
+                        {/* <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#about">About</Nav.Link>
+                        <Nav.Link href="#services">Services</Nav.Link> */}
+
+                        <HashLink className="nav-menu" to="/home#home">Home</HashLink>
+                        <HashLink className="nav-menu" to="/about#about">About</HashLink>
+                        <HashLink className="nav-menu" to="/home#services">Services</HashLink>
+                        <HashLink className="nav-menu" to="/contact#contact">Contact</HashLink>
                     </Nav>
-                    <Form className="d-flex">
-                        <FormControl
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            aria-label="Search"
-                        />
-                        <Button variant="outline-success">Search</Button>
-                    </Form>
+                    <Link to='/login'><Button className="me-3" variant="outline-light">Login</Button></Link>
+                    <Button variant="outline-light">Logout</Button>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
