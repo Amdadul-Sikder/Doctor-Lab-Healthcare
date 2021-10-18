@@ -1,16 +1,19 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import "./Service.css"
 
 const Service = ({ service }) => {
-    const { name, description, img } = service;
+    const { id, name, description, img } = service;
     return (
         <div id="services" className="col-lg-4">
             <div className="single-service">
                 <img src={img} alt="" />
                 <h3>{name}</h3>
                 <p>{description}</p>
-                <Button>Appoinment</Button>
+                <Link to={`/appoinment/${id}`}>
+                    <Button>Appoinment</Button>
+                </Link>
             </div>
         </div>
     );

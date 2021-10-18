@@ -30,12 +30,11 @@ const Header = () => {
                     </Nav>
 
                     {
-                        user.email ?
-                            < Button Onclick={logOut} variant="outline-light">Logout</Button>
-                            :
+                        user?.email ?
+                            < Button onClick={logOut} variant="outline-light">Logout</Button> :
                             <Link to='/login'><Button className="me-3" variant="outline-light">Login</Button></Link>
                     }
-                    <HashLink className="ms-3 user-name">{user?.displayName}</HashLink>
+                    <Navbar.Text className="ms-3 user-name">{user?.displayName}</Navbar.Text>
 
                 </Navbar.Collapse>
             </Container>
