@@ -18,3 +18,9 @@
     background: -webkit-linear-gradient(
         45deg, #43DDE6 0%, #9870FC 100%);
 }
+.user-name{
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-style: italic;
+}

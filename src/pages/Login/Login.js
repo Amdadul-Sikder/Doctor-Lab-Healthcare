@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 import "./Login.css"
 
 const Login = () => {
+    const { googleSignIn } = useAuth();
     return (
         <div className="login">
             <div className="pt-5">
@@ -19,7 +21,7 @@ const Login = () => {
                     </Form.Group>
                     <Button className="login-btn" variant="primary">Login</Button>
                     <div className="text-center pt-3">
-                        <Button><i class="fab fa-google"></i> Sign in with Google</Button>
+                        <Button onClick={googleSignIn}><i class="fab fa-google"></i> Sign in with Google</Button>
                         <p className="pt-3">New user? <Link to="/register">Create an account</Link></p>
                     </div>
                 </Form>

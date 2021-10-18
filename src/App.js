@@ -11,36 +11,41 @@ import Footer from './pages/Shared/Footer/Footer';
 import Contact from './pages/Contact/Contact';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
+import AuthProvider from './Context/AuthProvider';
 
 function App() {
   return (
-    <Router>
-      <Header></Header>
-      <Switch>
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
-        <Route path="/home">
-          <Home></Home>
-        </Route>
-        <Route path="/about">
-          <About></About>
-        </Route>
-        <Route path="/contact">
-          <Contact></Contact>
-        </Route>
-        <Route path="/login">
-          <Login></Login>
-        </Route>
-        <Route path="/register">
-          <Register></Register>
-        </Route>
-        <Route path="*">
-          <NotFound></NotFound>
-        </Route>
-      </Switch>
-      <Footer></Footer>
-    </Router>
+    <div className="App">
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
+    </div>
   );
 }
 
