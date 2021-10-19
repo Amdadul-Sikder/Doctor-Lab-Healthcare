@@ -13,3 +13,12 @@
 .hero-content {
     width: 50%;
 }
+
+
+
+@media only screen and (max-width: 668px) {
+    .hero-content {
+        width: 70%;
+        padding: 10px;
+    }
+  }

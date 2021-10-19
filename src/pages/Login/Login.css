@@ -21,3 +21,13 @@
     width: 100%;
     margin-top: 20px;
 }
+
+@media only screen and (max-width: 668px) {
+    .login .contact-form{
+        width: 90%;
+        padding: 30px 50px;
+    }
+    .google-btn{
+        width: 100%;
+    }
+  }

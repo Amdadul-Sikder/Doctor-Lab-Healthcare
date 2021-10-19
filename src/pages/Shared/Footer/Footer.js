@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className="col-lg-4">
                         <h2>+880123456789</h2>
                         <h5>contact@gmail.com</h5>
-                        <HashLink to="/contact#contact"><Button className="mt-3" variant="light">Contact Us</Button></HashLink>
+                        <HashLink to="/contact#contact"><Button className=" footer-btn mt-3" variant="light">Contact Us</Button></HashLink>
                     </div>
                     <hr />
                     <p>Copyright &copy; 2021</p>

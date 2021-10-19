@@ -12,7 +12,6 @@ import Contact from './pages/Contact/Contact';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import AuthProvider from './Context/AuthProvider';
-import Services from './pages/Home/Services/Services';
 import Appoinment from './pages/Home/Appoinment/Appoinment';
 
 function App() {

@@ -5,7 +5,7 @@ import useAuth from '../../Hooks/useAuth';
 import "./Login.css"
 
 const Login = () => {
-    const { googleSignIn } = useAuth();
+    const { googleSignIn, handleUserLogin } = useAuth();
     return (
         <div className="login">
             <div className="pt-5">
@@ -19,9 +19,9 @@ const Login = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="text" />
                     </Form.Group>
-                    <Button className="login-btn" variant="primary">Login</Button>
+                    <Button onClick={handleUserLogin} className="login-btn" variant="primary">Login</Button>
                     <div className="text-center pt-3">
-                        <Button onClick={googleSignIn}><i class="fab fa-google"></i> Sign in with Google</Button>
+                        <Button className="google-btn" onClick={googleSignIn}><i class="fab fa-google"></i> Sign in with Google</Button>
                         <p className="pt-3">New user? <Link to="/register">Create an account</Link></p>
                     </div>
                 </Form>
