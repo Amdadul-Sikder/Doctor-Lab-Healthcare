@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import "./Appoinment.css"
 
 const Appoinment = () => {
     const { serviceId } = useParams();
@@ -22,7 +23,7 @@ const Appoinment = () => {
     }, [services])
 
     return (
-        <div>
+        <div className="single-service d-flex">
             <h3>This is appoinment {serviceId}</h3>
             {/* <h3>This is  {appoinment?.name}</h3> */}
 
