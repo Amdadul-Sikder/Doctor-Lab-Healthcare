@@ -10,6 +10,7 @@ const useFirebase = () => {
 
     const [user, setUser] = useState({});
     const [isLoading, setIsloading] = useState(true);
+
     const [error, setError] = useState("");
 
 
@@ -41,6 +42,7 @@ const useFirebase = () => {
     }, []);
 
     const handleUserRegister = (email, password) => {
+        console.log(email, password);
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 console.log(result.user)

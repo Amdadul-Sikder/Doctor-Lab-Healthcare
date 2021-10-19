@@ -6,6 +6,11 @@
     padding-bottom: 30px;
     
 }
+
+form.contact-form input {
+    width: 100%;
+    border: 1px solid #999;
+}
 .register .contact-form{
     padding: 40px 50px;
     width: 30%;

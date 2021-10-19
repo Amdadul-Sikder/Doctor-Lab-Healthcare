@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
@@ -6,20 +6,45 @@ import "./Login.css"
 
 const Login = () => {
     const { googleSignIn, handleUserLogin } = useAuth();
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const hanldeEmail = (e) => {
+        setEmail(e.target.value);
+    };
+    const hanldePassword = (e) => {
+        setPassword(e.target.value);
+    };
+
+    const handleLogin = (e) => {
+        handleUserLogin(email, password);
+        e.preventDefault();
+    };
+
     return (
         <div className="login">
             <div className="pt-5">
                 <Form className="contact-form">
                     <h2 className="mb-5 text-center">Login</h2>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="text" placeholder="" />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="text" />
-                    </Form.Group>
-                    <Button onClick={handleUserLogin} className="login-btn" variant="primary">Login</Button>
+
+                    <input
+                        onChange={hanldeEmail}
+                        className="mt-2 p-2"
+                        type="email"
+                        placeholder="Email"
+                    />
+                    <br />
+                    <input
+                        onChange={hanldePassword}
+                        className="mt-2 p-2"
+                        type="password"
+                        placeholder="Password"
+                    />
+                    <br />
+
+
+                    <Button onClick={handleLogin} className="login-btn" variant="primary">Login</Button>
                     <div className="text-center pt-3">
                         <Button className="google-btn" onClick={googleSignIn}><i class="fab fa-google"></i> Sign in with Google</Button>
                         <p className="pt-3">New user? <Link to="/register">Create an account</Link></p>
