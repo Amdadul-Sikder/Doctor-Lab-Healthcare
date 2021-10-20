@@ -2,4 +2,21 @@
     height: 500px;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.social-link i.fab {
+    font-size: 30px;
+    padding: 21px;
+    color: #1b6f61;
+    height: 30px;
+    width: 30px;
+    transition: .3s;
+}
+
+.social-link i.fab:hover {
+    color: #e43a15;
+}
+.appoinment-btn:hover{
+    background-color: #d34c52;
 }

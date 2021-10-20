@@ -4,7 +4,19 @@
     width: 100%;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
+
+.hero-area::after{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: "";
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,22,1) 35%, rgba(0,212,255,1) 100%);    
+    opacity: .8;
+}
+
 .hero-area {
     display: flex;
     align-items: center;
@@ -12,13 +24,25 @@
 
 .hero-content {
     width: 50%;
+    z-index: 999;
+    position: relative;
+    color: #fff;
 }
-
+.hero-content p {
+    font-size: 20px;
+    width: 80%;
+    padding: 20px 0px;
+    
+}
 
 
 @media only screen and (max-width: 668px) {
     .hero-content {
         width: 70%;
         padding: 10px;
+    }
+    .hero-content p {
+        width: 100%;
+        
     }
   }

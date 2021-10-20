@@ -12,7 +12,7 @@ const Service = ({ service }) => {
                 <h3>{name}</h3>
                 <p>{description}</p>
                 <Link to={`/appoinment/${id}`}>
-                    <Button>Appoinment</Button>
+                    <Button className="appoinment-btn mt-3">Appoinment</Button>
                 </Link>
             </div>
         </div>
