@@ -5,7 +5,13 @@
 
 .single-service {
     text-align: center;
-    padding: 30px;
+    padding: 50px 30px;
     margin-bottom: 30px;
     border: 1px solid #ddd;
+    transition: .3s;
+    border-radius: 5px;
+}
+.single-service:hover{
+    box-shadow: 0px 5px 10px rgb(65, 81, 102);
+    cursor: pointer;
 }

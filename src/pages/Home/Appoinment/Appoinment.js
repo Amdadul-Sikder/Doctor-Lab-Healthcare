@@ -23,7 +23,7 @@ const Appoinment = () => {
     }, [services])
 
     return (
-        <div className="single-service d-flex">
+        <div className="appoinment-service d-flex">
             <h3>This is appoinment {serviceId}</h3>
             {/* <h3>This is  {appoinment?.name}</h3> */}
 
