@@ -34,6 +34,7 @@ const Login = () => {
     const handleLogin = (e) => {
         handleUserLogin(email, password);
         e.preventDefault();
+        history.push("/home")
     };
 
     return (

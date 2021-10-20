@@ -38,11 +38,14 @@
 
 @media only screen and (max-width: 668px) {
     .hero-content {
-        width: 70%;
-        padding: 10px;
+        width: 80%;
+        padding: 0px 15px;
     }
     .hero-content p {
         width: 100%;
         
+    }
+    .hero-area{
+        height: 550px;
     }
   }

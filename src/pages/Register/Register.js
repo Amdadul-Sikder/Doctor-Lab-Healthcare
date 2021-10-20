@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 import "./Register.css"
 
 const Register = () => {
     const { handleUserRegister, googleSignIn } = useAuth();
+    const history = useHistory();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -21,6 +23,8 @@ const Register = () => {
     const handleRegister = (e) => {
         handleUserRegister(email, password);
         e.preventDefault();
+        history.push("/home")
+
     };
 
     return (
